@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       elem.innerHTML +
       '<li class="chart-box" style="background-color:' +
       chartItem[i].color +
-      '; width: 0%;" data width=' +
+      '; width: 0%;" data-width=' +
       width +
       '>' +
       chartItem[i].label +
@@ -70,7 +70,7 @@ function resizeTicks () {
   const tickElements = document.getElementsByClassName('tick')
   for (let i = 0; i < tickElements.length; i++) {
     let left = parseInt(i * chunk)
-    if (left == 0) {
+    if (left === 0) {
       left = -2
     }
 
@@ -96,13 +96,16 @@ window.addEventListener(
         const width = elem[i].dataset.width
         elem[i].style.width = width + '%'
         elem[i].style.paddingLeft = '20px'
+        console.log('width', width)
+
+        console.log('width', width)
       }
     }
   },
   true
 )
 
-function isInViewport(element) {
+function isInViewport (element) {
   const rect = element.getBoundingClientRect()
   return (
     rect.top >= 0 &&

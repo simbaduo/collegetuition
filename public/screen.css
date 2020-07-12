@@ -355,9 +355,9 @@ body {
   border-left: solid grey 2px;
   border-bottom: solid grey 2px;
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 2; */
 }
 
 .chart li {
