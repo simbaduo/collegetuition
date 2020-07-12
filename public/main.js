@@ -2,98 +2,116 @@ const hamburgerMenu = document.querySelector('.toggle')
 
 const navBar = document.querySelector('.navBar')
 
-hamburgerMenu.addEventListener('click', () => {
-  navBar.classList.toggle('mobileNavBar')
-}, false)
+hamburgerMenu.addEventListener(
+  'click',
+  () => {
+    navBar.classList.toggle('mobileNavBar')
+  },
+  false
+)
 
-document.addEventListener('DOMContentLoaded', function(event) {
-
-
+document.addEventListener('DOMContentLoaded', function (event) {
   // JSON Object
   var chartItem = [
     {
-     label: "Public Medical School, In-State $34,592",
-     cost: 34592,
-     color: "#E57373"
-  },
-  {
-     label: "Public Medical School, Out-of-State $56,668",
-     cost: 58668,
-     color: "#64B5F6"
-  },
-  {
-     label: "Private Medical School $50,000",
-     cost: 50000,
-     color: "#4DB6AC"
-  },
-  {
-     label: "CAM Education $25,000",
-     cost: 25000,
-     color: "#FF8A65"
-  }
- ];
+      label: 'Public Medical School, In-State $34,592',
+      cost: 34592,
+      color: '#E57373',
+    },
+    {
+      label: 'Public Medical School, Out-of-State $56,668',
+      cost: 58668,
+      color: '#64B5F6',
+    },
+    {
+      label: 'Private Medical School $50,000',
+      cost: 50000,
+      color: '#4DB6AC',
+    },
+    {
+      label: 'CAM Education $25,000',
+      cost: 25000,
+      color: '#FF8A65',
+    },
+  ]
+  console.log('chartItem', chartItem)
 
-  let maxCost = 0;
+  let maxCost = 0
   for (let i = 0; i < chartItem.length; i++) {
-
     if (chartItem[i].cost > maxCost) {
-      maxCost = chartItem[i].cost;
+      maxCost = chartItem[i].cost
     }
   }
 
   for (let i = 0; i < chartItem.length; i++) {
-  
     const width = Math.floor((chartItem[i].cost / maxCost) * 100)
-    let elem = document.getElementsByClassName('chart')[0]
-     elem.innerHTML = elem.innerHTML + '<li class="chart-box" style="background-color:' + chartItem[i].color + '; width: 0%" data width=' + width + '>' + chartItem[i].label + '</li>';
+    const elem = document.getElementsByClassName('chart')[0]
+    elem.innerHTML =
+      elem.innerHTML +
+      '<li class="chart-box" style="background-color:' +
+      chartItem[i].color +
+      '; width: 0%;" data width=' +
+      width +
+      '>' +
+      chartItem[i].label +
+      '</li>'
   }
- 
-
 })
 
-resizeTicks();
+resizeTicks()
 
-  function resizeTicks() {
-    let chartContainerElement =   document.getElementById('chartContainer');
-    let left60k = chartContainerElement.offsetWidth;
-    let chartContainerElementHeight = chartContainerElement.offsetHeight;
-    console.log('chartContainerElementHeight', chartContainerElementHeight);
+function resizeTicks () {
+  const chartDataElement = document.getElementById('chartData')
+  const left60k = chartDataElement.offsetWidth
+  const chartDataElementHeight = chartDataElement.offsetHeight
+  console.log('chartDataElementHeight', chartDataElementHeight)
 
-    let chunk = left60k / 6;
-    let tickElements = document.getElementsByClassName('tick');
-    for (let i = 0; i < tickElements.length; i++) {
-      let left = parseInt(i*chunk);
-      if (left == 0) {
-        left = -2;
-      }
-
-      tickElements[i].setAttribute("style", "left:"+parseInt(i*chunk)+"px; top:"+chartContainerElementHeight+"px;");
-      console.log('tickElements', );
+  const chunk = left60k / 6
+  const tickElements = document.getElementsByClassName('tick')
+  for (let i = 0; i < tickElements.length; i++) {
+    let left = parseInt(i * chunk)
+    if (left == 0) {
+      left = -2
     }
-    console.log('tickElements', tickElements);
+
+    tickElements[i].setAttribute(
+      'style',
+      'left:' +
+        parseInt(i * chunk) +
+        'px; top:' +
+        chartDataElementHeight +
+        'px;'
+    )
+    console.log('tickElements')
   }
-  
-  window.addEventListener('scroll', function(){
- 
-    let elem = document.getElementsByClassName("chart-box");
-    for (let i=0; i<elem.length; i++) {
+  console.log('tickElements', tickElements)
+}
+
+window.addEventListener(
+  'scroll',
+  function () {
+    const elem = document.getElementsByClassName('chart-box')
+    for (let i = 0; i < elem.length; i++) {
       if (isInViewport(elem[i])) {
-        const width = elem[i].dataset.width;
-        elem[i].style.width = width + "%";
-        elem[i].style.paddingLeft = "20px";
+        const width = elem[i].dataset.width
+        elem[i].style.width = width + '%'
+        elem[i].style.paddingLeft = '20px'
       }
     }
-  }, true);
-  
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+  },
+  true
+)
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect()
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
 
 document.openHamburgerMenu = function () {
   console.log('Menu Open')
@@ -120,6 +138,3 @@ window.addEventListener('scroll', function (e) {
   console.log('scroll;')
   resizeTicks()
 })
-
-
-
