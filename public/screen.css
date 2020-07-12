@@ -143,12 +143,168 @@ body {
   color: #ffffff;
 }
 
-/* @media only screen and (min-width: 1000px) {
-  #styleBurger {
-    display: none;
-  }
-} */
 
+.titleBackgroundContainer {
+  width: 100%;
+}
+
+.titleBackground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 550px;
+  background-size: 100% 100%;
+  background-image: url("https://i.ibb.co/1XRRfPY/univ.png");
+  /* border: solid green 2px; */
+}
+
+.titleBodyContainer {
+  margin-bottom: -2rem;
+  /* border: solid blue 2px; */
+}
+
+.titleBodyHeadline {
+  color: rgb(167, 2, 2);
+  font-size: 60px;
+  font-family: cursive;
+  font-weight: bold;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.toolsOuterContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
+}
+
+.toolsInnerContainer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  /* border: solid red 2px; */
+}
+
+
+.toolsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-bottom: 5rem;
+  /* border-right: solid grey 1px; */
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.toolsTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.toolsTextContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.toolsText {
+  font-size: 10px;
+   width: 200px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+ }
+
+ .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 80%;
+  font-size: 13px;
+  font-weight: 1000;
+  font-family: 'Poppins', sans-serif;
+  padding: 4px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button.red:hover {
+  background-color: rgb(220, 121, 118);
+}
+
+.button.red:active {
+  background-color: rgb(177, 79, 76);
+}
+
+.button.blue:hover {
+  background-color: rgb(118, 181, 240);
+}
+
+.button.blue:active {
+  background-color: rgb(57, 133, 205);
+}
+
+.button.green:hover {
+  background-color: rgb(105, 180, 172);
+}
+
+.button.green:active {
+  background-color: rgb(48, 148, 138);
+}
+
+.button.orange:hover {
+  background-color: rgb(241, 143, 109);
+}
+
+.button.orange:active {
+  background-color: rgb(186, 79, 43);
+}
+
+.button:hover {
+  background-color: rgb(79, 134, 252);
+}
+
+.button:active {
+  background-color: rgb(47, 96, 201);
+}
 
 @media only screen and (max-width: 1000px) {
 
@@ -179,6 +335,25 @@ body {
     list-style: none;
     padding: 0;
   }
+}
+
+@media only screen and (min-width: 1001px) {
+
+  /* #styleBurger {
+    display: none;
+  } */
+
+  /* .toolsOuterContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
+}
+
+.toolsInnerContainer {
+  display: flex;
+} */
+
 }
 
 

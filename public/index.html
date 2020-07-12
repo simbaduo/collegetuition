@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
-    <!-- maybe nav? -->
+    <!-- Header & Navigation -->
     <div class="headerOuterContainer">
       <div id="headerInnerContainer">
         <div class="logoContainer">
@@ -30,22 +30,29 @@
     </div>
 
     <div class="buttonContainer">
-      <img height="50px" width="50px" src="https://i.ibb.co/yFGYWnn/download-1.png" alt="Navigation Menu" class="toggle" onclick="openHamburgerMenu()"/>
+      <img
+        height="50px"
+        width="50px"
+        src="https://i.ibb.co/yFGYWnn/download-1.png"
+        alt="Navigation Menu"
+        class="toggle"
+        onclick="openHamburgerMenu()"
+      />
     </div>
 
     <div id="styleBurger">
       <div class="mobileNavContainer">
         <div class="bm-menu-wrap">
           <div class="bm-menu">
-              <nav class="bm-item-list">
-                  <div class="bm-item" tabindex="0">
-                      <div class="nav-linkHamburger"><a href="">Home</a></div>
-                      <div class="nav-linkHamburger"><a href="">About</a></div>
-                      <div class="nav-linkHamburger"><a href="">Apply</a></div>
-                      <div class="nav-linkHamburger"><a href="">Community</a></div>
-                      <div class="nav-linkHamburger"><a href="">Contact</a></div>
-                  </div>
-              </nav>
+            <nav class="bm-item-list">
+              <div class="bm-item" tabindex="0">
+                <div class="nav-linkHamburger"><a href="">Home</a></div>
+                <div class="nav-linkHamburger"><a href="">About</a></div>
+                <div class="nav-linkHamburger"><a href="">Apply</a></div>
+                <div class="nav-linkHamburger"><a href="">Community</a></div>
+                <div class="nav-linkHamburger"><a href="">Contact</a></div>
+              </div>
+            </nav>
           </div>
           <div id="bm-cross-button" onclick="closeHamburgerMenu()">
             <span class="bm-cross-span">
@@ -54,10 +61,163 @@
             </span>
             <button tabindex="0">Close Menu</button>
           </div>
+        </div>
+        <div>
+          <div
+            class="bm-burger-button"
+            style="
+              z-index: 1000;
+              position: fixed;
+              width: 36px;
+              height: 30px;
+              right: 36px;
+              top: 36px;
+            "
+          >
+            <span
+              ><span
+                class="bm-burger-bars"
+                style="
+                  position: absolute;
+                  height: 20%;
+                  left: 0px;
+                  right: 0px;
+                  top: 0%;
+                  opacity: 1;
+                  background: rgb(48, 48, 48);
+                "
+              ></span
+              ><span
+                class="bm-burger-bars"
+                style="
+                  position: absolute;
+                  height: 20%;
+                  left: 0px;
+                  right: 0px;
+                  top: 40%;
+                  opacity: 1;
+                  background: rgb(48, 48, 48);
+                "
+              ></span
+              ><span
+                class="bm-burger-bars"
+                style="
+                  position: absolute;
+                  height: 20%;
+                  left: 0px;
+                  right: 0px;
+                  top: 80%;
+                  opacity: 1;
+                  background: rgb(48, 48, 48);
+                "
+              ></span></span
+            ><button
+              style="
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                font-size: 0px;
+                background: transparent;
+                cursor: pointer;
+              "
+            >
+              Open Menu
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-          <div class="bm-burger-button" style="z-index: 1000; position: fixed; width: 36px; height: 30px; right: 36px; top: 36px;"><span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 0%; opacity: 1; background: rgb(48, 48, 48);"></span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 40%; opacity: 1; background: rgb(48, 48, 48);"></span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1; background: rgb(48, 48, 48);"></span></span><button style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;">Open Menu</button></div>
+    </div>
+
+    <!-- Header Area With Glow Text -->
+    <div class="titleBackgroundContainer">
+      <div class="titleBackground">
+        <div class="titleBodyContainer">
+          <p class="titleBodyHeadline">Just How Much Is College</p>
+          <p class="titleBodyText"></p>
+        </div>
       </div>
+    </div>
+
+    <!-- Tools and Resources Section -->
+    <div class="toolsOuterContainer">
+      <div class="toolsInnerContainer">
+        <!-- Scholarships Tool -->
+        <div class="toolsBox">
+          <img
+            src="https://i.ibb.co/kHNsFkC/education-scholarships-study-knowledge-512.png"
+            class="icon"
+          />
+          <p class="toolsTitle">Scholarships</p>
+          <div class="toolsTextContainer">
+            <p class="toolsText">
+              Scholarships have unique benefits and are the most desirable form
+              of financial aid. Not only can they enhance your resume, the funds
+              do not need to be paid back. Click below to see available
+              scholarships in your state.
+            </p>
+          </div>
+          <div class="buttonContainer">
+            <div class="buttonBox">
+              <a class="button blue" type="submit" href="">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Scholarships Tool -->
+        <div class="toolsBox">
+          <img src="https://i.ibb.co/8Y6nVRT/grid4-iconb2.png" class="icon" />
+          <p class="toolsTitle">Financial Aid</p>
+          <div class="toolsTextContainer">
+            <p class="toolsText">
+              Financial aid can come from many different sources. We have
+              compiled a list of tools you can use to help support you
+              financially during your collegiate journey. Click below to learn
+              more!
+            </p>
+          </div>
+          <div class="buttonContainer">
+            <div class="buttonBox">
+              <a class="button green" type="submit" href="">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Scholarships Tool -->
+        <div class="toolsBox">
+          <img src="https://i.ibb.co/G382yGp/download.png" class="icon" />
+          <p class="toolsTitle">Budget Calculator</p>
+          <div class="toolsTextContainer">
+            <p class="toolsText">
+              Interested in crunching out the numbers? Our team has worked on creating a budget calculator where you can input your expenses (we have guidelines as well!) and see just how much a semester will cost you.
+            </p>
+          </div>
+          <div class="buttonContainer">
+            <div class="buttonBox">
+              <a class="button red" type="submit" href="">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Scholarships Tool -->
+        <div class="toolsBox">
+          <img
+            src="https://i.ibb.co/HnwxvDp/education-color-29-512.png"
+            class="icon"
+          />
+          <p class="toolsTitle">Work On Campus</p>
+          <div class="toolsTextContainer">
+            <p class="toolsText">
+              Want to immerse yourself more into the University? Do you want to get paid while you enjoy campus? We have tons of job opportunities for passionate and motivated students. Here is a list of available campus jobs.
+            </p>
+          </div>
+          <div class="buttonContainer">
+            <div class="buttonBox">
+              <a class="button orange" type="submit" href="">Learn More</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
