@@ -14,23 +14,21 @@ body {
   /* text-align: center; */
 }
 
-/* .headerOuterContainer {
-  display: flex;
-  justify-content: space-between;
-} */
+.headerOuterContainer {
+}
 
 #headerInnerContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 125px;
   /* border: solid grey 1px; */
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  padding-left: 5rem;
+  padding-left: 25rem;
 }
 
 .navBar {
@@ -38,23 +36,29 @@ body {
   margin-right: 3rem;
   list-style: none;
   align-items: center;
+  padding-right: 10rem;
 }
 
-.navBar a {
+.navItem a {
   text-decoration: none;
+  color: white;
 }
 
 .navItem {
-  background-color: grey;
-  color: white;
-  border: solid white 4px;
+  background-color: rgb(114, 35, 35);
   border-radius: 5px;
-  padding-top: 2px;
+  padding-top: 4px;
   padding-right: 10px;
   padding-bottom: 5px;
   padding-left: 10px;
+  margin-right: 6px;
+  margin-left: 6px;
   font-family: Verdana;
-  font-size: 12px;
+  font-size: 22px;
+}
+
+.navItem:hover {
+  background-color: rgb(82, 20, 20);
 }
 
 .toggle {
@@ -214,13 +218,13 @@ body {
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
 }
 
 .toolsTitle {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .toolsTextContainer {
@@ -229,8 +233,8 @@ body {
 }
 
 .toolsText {
-  font-size: 10px;
-   width: 200px;
+  font-size: 14px;
+   width: 250px;
    text-align: center;
    display: flex;
    justify-content: center;
