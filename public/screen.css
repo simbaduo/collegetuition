@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   margin-top: 25px;
   margin-bottom: 50px;
-  border: solid grey 1px;
+  /* border: solid grey 1px; */
 }
 
 .logoContainer {
@@ -316,7 +316,6 @@ body {
 .chartInnerContainer {
   display: flex;
   align-items: center;
-  width: 70%;
   border-top: solid grey 1px;
   padding-top: 10px;
 }
@@ -325,8 +324,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 20px;
   flex: 1;
 }
 
@@ -340,11 +337,11 @@ body {
   font-size: 12px;
 }
 
-.chartData {
+#chartData {
   display: flex;
-  flex-direction: column;
   flex: 2;
 }
+
 
 .chart{
   display: flex;
@@ -355,9 +352,7 @@ body {
   border-left: solid grey 2px;
   border-bottom: solid grey 2px;
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  flex: 2; */
+  width: 100%;
 }
 
 .chart li {
@@ -450,5 +445,3 @@ body {
 } */
 
 }
-
-
